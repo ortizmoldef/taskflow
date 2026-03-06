@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react"
+import { inputStyle, cardBtnStyle, cardStyle } from "../constants/styles"
 
 function TaskModal({ dark, editing, onClose, onSave }) {
   const [form, setForm] = useState({
@@ -23,7 +24,6 @@ function TaskModal({ dark, editing, onClose, onSave }) {
     setError(false)
   }, [editing])
 
-  // Función helper para actualizar campos
   const updateField = (field, value) => setForm(prev => ({ ...prev, [field]: value }))
 
   function handleSave() {
@@ -34,12 +34,6 @@ function TaskModal({ dark, editing, onClose, onSave }) {
     onSave(form)
   }
 
-  const inputStyle = {
-    background: dark ? "#0d0d12" : "#f5f4fc",
-    color: dark ? "#e8e8f0" : "#1a1a2e",
-    border: `1px solid ${dark ? "#2a2a40" : "#e0dff0"}`,
-  }
-
   return (
     <div
       className="fixed inset-0 flex items-center justify-center z-50"
@@ -48,7 +42,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
     >
       <div
         className="rounded-2xl p-7 w-full max-w-md border"
-        style={{ background: dark ? "#13131f" : "#fff", borderColor: dark ? "#2a2a40" : "#e0dff0" }}
+        style={cardStyle(dark)}
         onClick={e => e.stopPropagation()}
       >
         <div className="text-lg font-extrabold mb-5" style={{ fontFamily: "Syne, sans-serif" }}>
@@ -60,7 +54,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
           <label className="block text-xs font-semibold uppercase tracking-wide opacity-50 mb-2">Título</label>
           <input
             className="w-full rounded-xl px-4 py-2 text-sm outline-none"
-            style={{ ...inputStyle, borderColor: error ? "#ef4444" : inputStyle.border }}
+            style={{ ...inputStyle(dark), borderColor: error ? "#ef4444" : undefined }}
             placeholder="¿Qué hay que hacer?"
             value={form.title}
             onChange={e => { updateField("title", e.target.value); setError(false) }}
@@ -73,7 +67,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
           <label className="block text-xs font-semibold uppercase tracking-wide opacity-50 mb-2">Descripción</label>
           <textarea
             className="w-full rounded-xl px-4 py-2 text-sm outline-none resize-y"
-            style={{ ...inputStyle, minHeight: 70 }}
+            style={{ ...inputStyle(dark), minHeight: 70 }}
             placeholder="Detalles opcionales..."
             value={form.desc}
             onChange={e => updateField("desc", e.target.value)}
@@ -85,7 +79,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
           <label className="block text-xs font-semibold uppercase tracking-wide opacity-50 mb-2">Prioridad</label>
           <select
             className="w-full rounded-xl px-4 py-2 text-sm outline-none"
-            style={inputStyle}
+            style={inputStyle(dark)}
             value={form.priority}
             onChange={e => updateField("priority", e.target.value)}
           >
@@ -101,7 +95,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
           <input
             type="date"
             className="w-full rounded-xl px-4 py-2 text-sm outline-none"
-            style={{ ...inputStyle, colorScheme: dark ? "dark" : "light" }}
+            style={{ ...inputStyle(dark), colorScheme: dark ? "dark" : "light" }}
             value={form.deadline}
             onChange={e => updateField("deadline", e.target.value)}
           />
@@ -111,7 +105,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
         <div className="flex gap-3 justify-end">
           <button
             className="rounded-xl px-5 py-2 text-sm cursor-pointer border-none"
-            style={{ background: dark ? "#1a1a2e" : "#f0eff5", color: dark ? "#a0a0c0" : "#555570" }}
+            style={cardBtnStyle(dark)}
             onClick={onClose}
           >
             Cancelar
