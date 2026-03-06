@@ -21,7 +21,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
     } else {
       setForm({ title: "", desc: "", priority: "media", deadline: "" })
     }
-    setError(false)
+    setError(false) 
   }, [editing])
 
   const updateField = (field, value) => setForm(prev => ({ ...prev, [field]: value }))

@@ -51,9 +51,7 @@ function App() {
 
       {/* Header */}
       <div style={{ padding: "28px 32px 0", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-        <div style={{ fontFamily: "Syne, sans-serif", fontSize: 22, fontWeight: 800, letterSpacing: -0.5 }}>
-          task<span style={{ color: "#7c6df0" }}>flow</span>
-        </div>
+        <img src="/taskflow-logo.svg" alt="TaskFlow" style={{ height: 40, width: "auto" }} />
         <button
           onClick={() => setDark(!dark)}
           style={{
