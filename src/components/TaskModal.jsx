@@ -20,7 +20,7 @@ function TaskModal({ dark, editing, onClose, onSave }) {
     } else {
       setForm({ title: "", desc: "", priority: "media", deadline: "" })
     }
-    setError(false)
+    setError(false) 
   }, [editing])
 
   // Función helper para actualizar campos
