@@ -1,16 +1,96 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Español
 
-Currently, two official plugins are available:
+# ✅ TaskFlow
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Gestor de tareas minimalista y limpio construido con React, con prioridades, fechas límite, filtros y modo oscuro.
 
-## React Compiler
+## 🚀 Tecnologías
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** + **Vite**
+- **Zustand** — manejo de estado global
+- **Tailwind CSS v4** — estilos
+- **react-hot-toast** — notificaciones
+- **date-fns** — manejo de fechas
 
-## Expanding the ESLint configuration
+## ✨ Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Crear, editar y eliminar tareas
+- Niveles de prioridad (alta, media, baja)
+- Fechas límite con alertas de tareas vencidas
+- Filtrar por estado y prioridad
+- Búsqueda de tareas en tiempo real
+- Barra de progreso general
+- Modo oscuro / claro
+- Los datos persisten con localStorage
+
+## 📁 Estructura del proyecto
+```
+src/
+├── components/
+│   ├── TaskCard.jsx
+│   ├── TaskModal.jsx
+│   ├── Filters.jsx
+│   └── Stats.jsx
+├── store/
+│   └── taskStore.js
+├── utils/
+│   └── helpers.js
+├── constants/
+│   └── priorities.js
+└── App.jsx
+```
+
+## 🛠️ Instalación
+```bash
+npm install
+npm run dev
+```
+
+
+#English 
+# ✅ TaskFlow
+
+A clean and minimal task manager built with React, featuring priorities, deadlines, filters and dark mode.
+
+## 🚀 Tech Stack
+
+- **React** + **Vite**
+- **Zustand** — state management
+- **Tailwind CSS v4** — styling
+- **react-hot-toast** — notifications
+- **date-fns** — date handling
+
+## ✨ Features
+
+- Create, edit and delete tasks
+- Priority levels (high, medium, low)
+- Deadline tracking with overdue alerts
+- Filter by status and priority
+- Search tasks in real time
+- Progress bar
+- Dark / light mode
+- Data persists via localStorage
+
+## 📁 Project Structure
+```
+src/
+├── components/
+│   ├── TaskCard.jsx
+│   ├── TaskModal.jsx
+│   ├── Filters.jsx
+│   └── Stats.jsx
+├── store/
+│   └── taskStore.js
+├── utils/
+│   └── helpers.js
+├── constants/
+│   └── priorities.js
+└── App.jsx
+```
+
+## 🛠️ Installation
+```bash
+npm install
+npm run dev
+```
