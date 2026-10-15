@@ -7,7 +7,8 @@ Gestor de tareas minimalista y limpio construido con React, con prioridades, fec
 
 
 
-<img width="1280" height="740" alt="image" src="https://github.com/user-attachments/assets/4cb9a444-2312-4c62-a8eb-16047d62d34a" />
+<img width="1649" height="954" alt="Panel de control Taskflow futurista en tonos neón" src="https://github.com/user-attachments/assets/5db21ead-114b-49e1-a6e0-4d736d551807" />
+
 
 
 ## 🚀 Tecnologías
