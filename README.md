@@ -7,7 +7,8 @@ Gestor de tareas minimalista y limpio construido con React, con prioridades, fec
 
 
 
-<img width="1280" height="740" alt="image" src="https://github.com/user-attachments/assets/cee62f44-59b7-4b86-be0d-b5ceee7dacfc" />
+<img width="1280" height="740" alt="image" src="https://github.com/user-attachments/assets/4cb9a444-2312-4c62-a8eb-16047d62d34a" />
+
 
 ## 🚀 Tecnologías
 
